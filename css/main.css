@@ -196,7 +196,6 @@ ul, ol {
     color: #fff;
 }
 
-/* -- default nav -- */
 
 @media only screen and (min-width: 768px) {
     .main-nav li {
@@ -216,12 +215,12 @@ ul, ol {
     }
     .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
         background: transparent;
-        color: #6195FF;
+        color: #4f3558;
     }
     .main-nav>li>a:after {
         content: "";
         display: block;
-        background-color: #6195FF;
+        background-color: #4f3558;
         height: 2px;
         width: 0%;
         -webkit-transition: 0.2s width;
