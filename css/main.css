@@ -1,0 +1,405 @@
+/* -- Overall CSS -- */
+body {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    color: #868F9B;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #10161A;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+a {
+    color: #05a58d;
+    text-decoration: none;
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+    opacity: 0.8;
+    color: #328284;
+}
+
+.white-text {
+    color: #FFF;
+}
+
+/* -- section  -- */
+
+.section {
+    position: relative;
+    padding-top: 20px;
+}
+
+/* --  background section  -- */
+
+.bg-grey {
+    background-color: #FAFAFA;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+}
+
+.bg-dark {
+    background-color: #1C1D21;
+}
+
+/* --  background image -- */
+
+.bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-img .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .8;
+    background: #1C1D21;
+}
+
+/* --  section header  -- */
+
+.section-header {
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.title:after {
+    content:"";
+  	display:block;
+  	height:4px;
+  	width:40px;
+  	background-color: #328284;
+    margin-top: 20px;
+}
+
+.text-center .title:after {
+    margin: 20px auto 0px;
+}
+
+
+/* --  Navigation  -- */
+
+.navbar-brand {
+    padding: 0;
+    float: left;
+    margin-right: 10px;
+}
+
+.navbar-brand .logo, .navbar-brand .logo-alt {
+    max-height: 50px;
+    display: block;
+}
+
+#nav:not(.nav-transparent):not(.fixed-nav) .navbar-brand .logo-alt {
+	display: none;
+}
+
+#nav.nav-transparent:not(.fixed-nav) .navbar-brand .logo {
+	display: none;
+}
+
+#nav.fixed-nav .navbar-brand .logo-alt {
+    display: none;
+}
+
+#nav {
+    padding: 10px 0px;
+    background: #FFF;
+    -webkit-transition: 0.2s padding;
+    transition: 0.2s padding;
+    z-index: 999;
+}
+
+#nav.navbar {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0px;
+}
+
+#nav.fixed-nav {
+    position: fixed;
+    float: left;
+    left: 0;
+    right: 0;
+    padding: 0px 0px;
+    background-color: #fff !important;
+    border-bottom: 1px solid #EEE;
+}
+
+#nav.nav-transparent {
+    background: transparent;
+}
+
+.main-nav>li>a {
+    color: #10161A;
+    padding: 15px 0px;
+}
+
+#nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
+    color: #fff;
+}
+
+.main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
+    background: transparent;
+    color: #;
+}
+
+.main-nav>li>a:after {
+    content: "";
+    display: block;
+    background-color: #4f3558;
+    height: 2px;
+    width: 0%;
+    -webkit-transition: 0.2s width;
+    transition: 0.2s width;
+}
+
+.main-nav>li>a:hover:after, .main-nav>li.active>a:after {
+    width: 100%;
+}
+
+/* --  Header  -- */
+header {
+    position: relative;
+}
+
+#home {
+    height: 100vh;
+}
+
+#home .home-wrapper {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.home-content h1 {
+  text-transform: uppercase;
+}
+
+
+/* --  About  -- */
+.about {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    border: 1px solid #EEE;
+    margin: 15px 0px;
+}
+
+.about:after {
+    content: "";
+    background-color: #4f3558;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    z-index: -1;
+    -webkit-transition: 0.2s width;
+    transition: 0.2s width;
+}
+
+.about:hover:after {
+    width: 100%;
+}
+
+.about:hover h3 {
+    color: #fff;
+}
+
+
+/* --  Portfolio  -- */
+.work {
+    position: relative;
+    padding: 20px;
+}
+
+.work>img {
+  width: 100%;
+}
+
+.work .overlay {
+    background: #909095;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.work:hover .overlay {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    opacity: 0.8;
+}
+
+.work .work-content {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 50%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.work .work-content h3 {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+    color: #FFF;
+    margin-bottom: 10px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.work:hover .work-content h3 {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.work .work-content span {
+    display: block;
+    text-transform: uppercase;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+    color: #000;
+    margin-bottom: 5px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.work:hover .work-content span {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.work .work-link {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity;
+}
+
+.work .work-link a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #05a58d;
+    color: #FFF;
+    line-height: 50px;
+    text-align: center;
+}
+
+.work:hover .work-link {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+/* -- Footer  -- */
+
+#footer {
+  position: relative;
+}
+
+.footer-logo {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-logo>a>img {
+  max-height: 80px;
+  text-align: center;
+}
+
+.footer-contact p {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-follow {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-follow li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 13px;
+}
+
+.footer-follow li a {
+display: inline-block;
+width: 50px;
+height: 50px;
+line-height: 50px;
+text-align: center;
+border-radius: 3px;
+background-color: #4f3558;
+color:#FFF;
+}
+
+.footer-copyright p {
+  text-align: center;
+  font-size: 14px;
+  color: #39e7e9
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
